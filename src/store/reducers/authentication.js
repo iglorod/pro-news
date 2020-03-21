@@ -1,16 +1,50 @@
 import * as actionTypes from '../actions/actionTypes';
 
-const initialData = {
-    userName: null,
+const initialState = {
+    email: null,
+    error: false,
 }
 
-const reducer = (store = initialData, action) => {
-    switch(action.type) {
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
         case actionTypes.SIGN_IN: {
-            break;
+            const email = action.userData.email;
+
+            if (action.remember) {
+                localStorage.setItem('email', email);
+            }
+
+            return {
+                ...initialState,
+                email,
+            }
         }
 
-        default: return store;
+        case actionTypes.SIGN_IN_LOCALY: {
+            const email = localStorage.getItem('email');
+
+            return {
+                ...initialState,
+                email,
+            }
+        }
+
+        case actionTypes.LOGOUT: {
+            localStorage.clear();
+
+            return {
+                ...initialState,
+            }
+        }
+
+        case actionTypes.SIGN_ERROR: {
+            return {
+                ...initialState,
+                error: true,
+            }
+        }
+
+        default: return state;
     }
 }
 

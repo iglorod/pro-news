@@ -1,5 +1,8 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Route } from 'react-router-dom';
+import AnimatedSwitch from '../UI/AnimatedSwitch/AnimatedSwitch';
+import { connect } from 'react-redux'
+import { loginLocalyActionCreator } from '../../store/actions/authentication';
 
 import Profile from '../Profile/Profile';
 import Login from '../Login/Login';
@@ -7,18 +10,28 @@ import News from '../News/News';
 import Home from '../Home/Home';
 import Navbar from '../Navigation/Navigation';
 
-const layout = () => {
+const Layout = (props) => {
+    useEffect(() => {
+        if (localStorage.getItem('email')) props.signInLocaly(); //YOU SHALL NOT PASS!
+    }, [])
+    
     return (
         <React.Fragment>
             <Navbar />
-            <Switch>
+            <AnimatedSwitch>
                 <Route path={'/profile'} component={Profile} exact />
                 <Route path={'/login'} component={Login} exact />
                 <Route path={'/news'} component={News} exact />
                 <Route path={'/'} component={Home} />
-            </Switch>
+            </AnimatedSwitch>
         </React.Fragment>
     )
 }
 
-export default layout;
+const mapDispatchToProps = dispatch => {
+    return {
+        signInLocaly: () => { dispatch(loginLocalyActionCreator()) },
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Layout);

@@ -8,9 +8,11 @@ import thunk from 'redux-thunk';
 import App from './App';
 import './index.css';
 import authReducer from './store/reducers/authentication';
+import newsReducer from './store/reducers/news';
 
 const reducers = combineReducers({
   auth: authReducer,
+  news: newsReducer,
 })
 
 const store = createStore(reducers, applyMiddleware(thunk));
