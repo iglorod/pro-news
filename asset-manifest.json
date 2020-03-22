@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/pronews/static/css/main.6f472582.chunk.css",
+    "main.js": "/pronews/static/js/main.034c1cbc.chunk.js",
+    "main.js.map": "/pronews/static/js/main.034c1cbc.chunk.js.map",
+    "runtime-main.js": "/pronews/static/js/runtime-main.819b7093.js",
+    "runtime-main.js.map": "/pronews/static/js/runtime-main.819b7093.js.map",
+    "static/css/2.de424728.chunk.css": "/pronews/static/css/2.de424728.chunk.css",
+    "static/js/2.78d13981.chunk.js": "/pronews/static/js/2.78d13981.chunk.js",
+    "static/js/2.78d13981.chunk.js.map": "/pronews/static/js/2.78d13981.chunk.js.map",
+    "index.html": "/pronews/index.html",
+    "precache-manifest.45fb82216d7e20f234933512d3997dc6.js": "/pronews/precache-manifest.45fb82216d7e20f234933512d3997dc6.js",
+    "service-worker.js": "/pronews/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/pronews/static/css/2.de424728.chunk.css.map",
+    "static/css/main.6f472582.chunk.css.map": "/pronews/static/css/main.6f472582.chunk.css.map",
+    "static/js/2.78d13981.chunk.js.LICENSE.txt": "/pronews/static/js/2.78d13981.chunk.js.LICENSE.txt",
+    "static/media/logo-black.png": "/pronews/static/media/logo-black.43348881.png",
+    "static/media/logo.png": "/pronews/static/media/logo.f81063f4.png",
+    "static/media/profile.png": "/pronews/static/media/profile.26d9eed8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.819b7093.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.78d13981.chunk.js",
+    "static/css/main.6f472582.chunk.css",
+    "static/js/main.034c1cbc.chunk.js"
+  ]
+}
