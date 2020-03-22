@@ -24,7 +24,7 @@ export const finishLoadingActionCreator = () => {
 export const loadNewsAction = () => {
     return dispatch => {
         dispatch(startLoadingActionCreator());
-        axios.get('http://newsapi.org/v2/top-headlines?country=us&apiKey=a644175197bc4a979252ed51d8bfed8b')
+        axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=a644175197bc4a979252ed51d8bfed8b')
             .then(response => {
                 dispatch(loadNewsActionCreator(response.data.articles))
                 dispatch(finishLoadingActionCreator());
