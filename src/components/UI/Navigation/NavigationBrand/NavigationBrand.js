@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import Logo from '../../../assets/image/logo.png';
+import Logo from '../../../../assets/image/logo.png';
 import classes from './NavigationBrand.module.css';
 
 const NavigationBrand = () => {

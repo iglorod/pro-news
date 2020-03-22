@@ -8,7 +8,7 @@ import Profile from '../Profile/Profile';
 import Login from '../Login/Login';
 import News from '../News/News';
 import Home from '../Home/Home';
-import Navbar from '../Navigation/Navigation';
+import Navbar from '../UI/Navigation/Navigation';
 
 const Layout = (props) => {
     useEffect(() => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
-import { logoutActionCreator } from '../../../../store/actions/authentication';
+import { logoutActionCreator } from '../../../../../store/actions/authentication';
 
 const LogoutButton = (props) => {
     const logoutHandler = () => {
