@@ -6,4 +6,6 @@ export const LOGOUT = 'LOGOUT';
 
 //news
 export const LOAD_NEWS = 'LOAD_NEWS';
+export const LOAD_START = 'LOAD_START';
+export const LOAD_FINISH = 'LOAD_FINISH';
 

@@ -4,6 +4,7 @@ import { Container, CardColumns } from 'react-bootstrap';
 
 import { loadNewsAction } from '../../store/actions/news';
 import Article from './Article/Article';
+import Spinner from '../UI/Spinner/Spinner';
 
 const News = (props) => {
     useEffect(() => {
@@ -12,6 +13,7 @@ const News = (props) => {
 
     return (
         <Container style={{paddingTop: '5%'}}>
+            <Spinner show={props.loading} />
             <CardColumns>
                 {
                     props.news.map(item => {
@@ -28,6 +30,7 @@ const News = (props) => {
 const mapStateToProps = state => {
     return {
         news: state.news.articles,
+        loading: state.news.loading,
     }
 }
 
